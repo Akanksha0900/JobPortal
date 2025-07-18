@@ -122,7 +122,11 @@ const JobListing = () => {
             ))}
             <a href="#job-list">
               <img
-                onClick={() => setCurrentPage(Math.mi (currentPage+1,Math.))}
+                onClick={() =>
+                  setCurrentPage(
+                    Math.mi(currentPage + 1, Math.ceil(jobs.length / 6))
+                  )
+                }
                 src={assets.right_arrow_icon}
                 alt=""
               />
